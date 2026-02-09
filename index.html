@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Boba & Yogurt Co. | Signature Menu</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <nav class="nav">
+      <div class="logo">Boba & Yogurt Co.</div>
+      <div class="nav-links">
+        <a href="#menu">Menu</a>
+        <a href="#cart">Cart</a>
+        <button class="cta">Order Pickup</button>
+      </div>
+    </nav>
+    <div class="hero-content">
+      <p class="tag">Freshly whisked · Handcrafted daily</p>
+      <h1>Signature Flavor Menu</h1>
+      <p>
+        Experience our curated boba and yogurt blends inspired by lush gardens and
+        classic tea houses. Choose your favorites and build your order in seconds.
+      </p>
+      <div class="hero-actions">
+        <button class="primary">View Menu</button>
+        <button class="ghost">Seasonal Toppings</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="menu" class="menu-section">
+      <div class="section-header">
+        <h2>Signature Flavours</h2>
+        <p>Select as many as you like. Each drink is brewed to order.</p>
+      </div>
+      <div class="menu-grid">
+        <article class="menu-card">
+          <div class="menu-image matcha"></div>
+          <div class="menu-details">
+            <h3>Matcha Meadow</h3>
+            <p>Silky matcha yogurt layered with honey oat boba and a meadow foam.</p>
+            <div class="menu-footer">
+              <span class="price">GHS 40</span>
+              <button class="add-btn" data-name="Matcha Meadow" data-price="40">Add to Cart</button>
+            </div>
+          </div>
+        </article>
+        <article class="menu-card">
+          <div class="menu-image taro"></div>
+          <div class="menu-details">
+            <h3>Taro Cloud</h3>
+            <p>Creamy taro yogurt crowned with vanilla cloud crema and soft boba.</p>
+            <div class="menu-footer">
+              <span class="price">GHS 40</span>
+              <button class="add-btn" data-name="Taro Cloud" data-price="40">Add to Cart</button>
+            </div>
+          </div>
+        </article>
+        <article class="menu-card">
+          <div class="menu-image green"></div>
+          <div class="menu-details">
+            <h3>Green Zenith</h3>
+            <p>Jasmine green tea yogurt with aloe cubes and a citrus lift.</p>
+            <div class="menu-footer">
+              <span class="price">GHS 40</span>
+              <button class="add-btn" data-name="Green Zenith" data-price="40">Add to Cart</button>
+            </div>
+          </div>
+        </article>
+        <article class="menu-card">
+          <div class="menu-image classic"></div>
+          <div class="menu-details">
+            <h3>The Classic Tee</h3>
+            <p>House black tea yogurt with brown sugar boba and creamy finish.</p>
+            <div class="menu-footer">
+              <span class="price">GHS 40</span>
+              <button class="add-btn" data-name="The Classic Tee" data-price="40">Add to Cart</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="cart" class="cart-section">
+      <div class="section-header">
+        <h2>Your Cart</h2>
+        <p>Review your selections and update quantities before checkout.</p>
+      </div>
+      <div class="cart-card">
+        <div class="cart-header">
+          <span>Item</span>
+          <span>Qty</span>
+          <span>Price</span>
+        </div>
+        <div id="cart-items" class="cart-items">
+          <p class="empty">Your cart is empty. Add a flavour to get started.</p>
+        </div>
+        <div class="cart-summary">
+          <div>
+            <span>Subtotal</span>
+            <strong id="cart-total">GHS 0</strong>
+          </div>
+          <button class="checkout">Checkout</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div>
+      <h4>Boba & Yogurt Co.</h4>
+      <p>102 Garden Lane · Accra · Open daily 10am - 10pm</p>
+    </div>
+    <div class="footer-links">
+      <a href="#">Instagram</a>
+      <a href="#">WhatsApp</a>
+      <a href="#">Contact</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
