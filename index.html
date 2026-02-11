@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Adinkra Legal Chambers | Barrister Ama Nkrumah</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand-mark">⚖</div>
+    <div class="brand-text">
+      <p class="firm-name">Adinkra Legal Chambers</p>
+      <p class="lawyer-name">Barrister Ama Nkrumah, Esq.</p>
+    </div>
+    <button class="nav-cta" id="book-consultation">Book Consultation</button>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-overlay">
+        <p class="eyebrow">Trusted Advocacy Across Africa & Beyond</p>
+        <h1>Strategic legal counsel rooted in excellence, integrity, and African leadership.</h1>
+        <p class="hero-copy">
+          We represent entrepreneurs, families, and institutions with strong courtroom advocacy and practical legal advisory services.
+        </p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn btn-primary">Schedule a Meeting</a>
+          <a href="#services" class="btn btn-secondary">Explore Services</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="credibility">
+      <article>
+        <h3>15+ Years</h3>
+        <p>Legal practice in Ghana, Nigeria, Kenya, and cross-border commercial matters.</p>
+      </article>
+      <article>
+        <h3>2,000+ Clients</h3>
+        <p>Businesses, families, and NGOs advised with confidentiality and precision.</p>
+      </article>
+      <article>
+        <h3>95% Success</h3>
+        <p>Favorable outcomes in strategic negotiations and high-stakes litigation.</p>
+      </article>
+    </section>
+
+    <section class="services" id="services">
+      <div class="section-head">
+        <p class="eyebrow">Practice Areas</p>
+        <h2>Legal services designed for modern African growth</h2>
+      </div>
+      <div class="service-grid">
+        <article class="service-card">
+          <h3>Corporate & Startup Law</h3>
+          <p>Company formation, shareholder agreements, compliance audits, and venture documentation.</p>
+        </article>
+        <article class="service-card">
+          <h3>Property & Land Matters</h3>
+          <p>Title verification, due diligence, conveyancing, tenancy matters, and dispute resolution.</p>
+        </article>
+        <article class="service-card">
+          <h3>Family & Succession Law</h3>
+          <p>Divorce, custody, prenuptial agreements, wills, probate, and estate management.</p>
+        </article>
+        <article class="service-card">
+          <h3>Litigation & Arbitration</h3>
+          <p>Commercial disputes, debt recovery, mediation strategy, and courtroom representation.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="about-image" role="img" aria-label="Barrister Ama Nkrumah in legal attire"></div>
+      <div class="about-content">
+        <p class="eyebrow">About the Principal Counsel</p>
+        <h2>Award-winning African legal mind with global standards.</h2>
+        <p>
+          Barrister Ama Nkrumah is a respected African attorney known for bold representation and client-centered legal strategy.
+          She is admitted to practice before superior courts in Ghana and has advised multinational clients on regional legal operations.
+        </p>
+        <ul>
+          <li>LL.M. International Commercial Law</li>
+          <li>Member, Ghana Bar Association</li>
+          <li>Featured Speaker, Pan-African Legal Summit</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="section-head">
+        <p class="eyebrow">Contact</p>
+        <h2>Request a confidential legal consultation</h2>
+      </div>
+      <form id="contact-form" class="contact-form">
+        <label>
+          Full Name
+          <input type="text" name="name" required />
+        </label>
+        <label>
+          Email Address
+          <input type="email" name="email" required />
+        </label>
+        <label>
+          Legal Issue
+          <select name="service" required>
+            <option value="">Select a practice area</option>
+            <option>Corporate & Startup Law</option>
+            <option>Property & Land Matters</option>
+            <option>Family & Succession Law</option>
+            <option>Litigation & Arbitration</option>
+          </select>
+        </label>
+        <label>
+          Message
+          <textarea name="message" rows="4" required></textarea>
+        </label>
+        <button type="submit" class="btn btn-primary">Submit Request</button>
+      </form>
+      <p id="form-status" class="form-status" aria-live="polite"></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Adinkra Legal Chambers · Accra, Ghana · Mon–Fri 8:30am–6:00pm</p>
+    <p>© 2026 Barrister Ama Nkrumah. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
