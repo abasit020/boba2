@@ -7,8 +7,10 @@ const EMAILJS_PUBLIC_KEY = 'I3x2xybaTL0jcZifD';
 const EMAILJS_SERVICE_ID = 'service_qfwyh2p';
 const EMAILJS_TEMPLATE_ID = 'template_u84quor';
 
+const submitButton = contactForm.querySelector('button[type="submit"]');
+
 if (window.emailjs) {
-  window.emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
+  window.emailjs.init(EMAILJS_PUBLIC_KEY);
 }
 
 bookButton.addEventListener('click', () => {
@@ -18,30 +20,25 @@ bookButton.addEventListener('click', () => {
 contactForm.addEventListener('submit', async (event) => {
   event.preventDefault();
 
-  const formData = new FormData(contactForm);
-  const name = formData.get('name');
-  const email = formData.get('email');
-  const service = formData.get('service');
-  const message = formData.get('message');
-
   if (!window.emailjs) {
     formStatus.textContent = 'Email service is unavailable right now. Please try again shortly.';
     return;
   }
 
+  const formData = new FormData(contactForm);
+  const name = formData.get('from_name');
+  const service = formData.get('legal_service');
+
   formStatus.textContent = 'Sending your consultation request...';
+  submitButton.disabled = true;
 
   try {
-    await window.emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {
-      from_name: name,
-      from_email: email,
-      legal_service: service,
-      message
-    });
-
+    await window.emailjs.sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, contactForm);
     formStatus.textContent = `Thank you, ${name}. Your ${service} consultation request has been sent successfully.`;
     contactForm.reset();
   } catch (error) {
     formStatus.textContent = 'Unable to send your request right now. Please try again shortly.';
+  } finally {
+    submitButton.disabled = false;
   }
 });
