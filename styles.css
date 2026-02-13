@@ -22,6 +22,7 @@ body {
   color: var(--ink);
   background: var(--cream);
   line-height: 1.6;
+  overflow-x: hidden;
 }
 
 h1,
@@ -29,6 +30,14 @@ h2,
 h3 {
   font-family: 'Playfair Display', serif;
   line-height: 1.2;
+}
+
+.site-header,
+.hero-overlay,
+section > *,
+.site-footer > * {
+  max-width: 1200px;
+  margin-inline: auto;
 }
 
 .site-header {
@@ -39,7 +48,7 @@ h3 {
   align-items: center;
   justify-content: space-between;
   gap: 16px;
-  padding: 16px 5vw;
+  padding: 16px clamp(16px, 5vw, 64px);
   background: rgba(17, 24, 39, 0.95);
   color: var(--white);
   border-bottom: 1px solid rgba(212, 160, 23, 0.35);
@@ -76,11 +85,10 @@ h3 {
     url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1600&q=80') center/cover;
   display: grid;
   align-items: center;
-  padding: 72px 5vw;
+  padding: clamp(56px, 8vw, 90px) clamp(16px, 5vw, 64px);
 }
 
 .hero-overlay {
-  max-width: 720px;
   color: var(--white);
 }
 
@@ -94,13 +102,14 @@ h3 {
 }
 
 .hero h1 {
-  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-size: clamp(1.8rem, 5vw, 3.2rem);
   margin-bottom: 14px;
+  max-width: 20ch;
 }
 
 .hero-copy {
   margin-bottom: 24px;
-  max-width: 640px;
+  max-width: 62ch;
 }
 
 .hero-actions {
@@ -130,12 +139,12 @@ h3 {
 }
 
 section {
-  padding: 72px 5vw;
+  padding: clamp(52px, 8vw, 78px) clamp(16px, 5vw, 64px);
 }
 
 .credibility {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 20px;
   background: var(--sand);
 }
@@ -156,13 +165,17 @@ section {
   max-width: 700px;
 }
 
+.section-head h2 {
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+}
+
 .services {
   background: var(--white);
 }
 
 .service-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 18px;
 }
 
@@ -239,21 +252,88 @@ section {
   background: #0f172a;
   color: rgba(255, 255, 255, 0.82);
   text-align: center;
-  padding: 24px 5vw;
+  padding: 24px clamp(16px, 5vw, 64px);
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
+  .credibility {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .service-grid {
+    grid-template-columns: 1fr;
+  }
+
   .about {
     grid-template-columns: 1fr;
   }
+
+  .about-image {
+    min-height: 340px;
+  }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 768px) {
   .site-header {
     flex-wrap: wrap;
+    align-items: flex-start;
+  }
+
+  .brand-text {
+    flex: 1;
   }
 
   .nav-cta {
     width: 100%;
+  }
+
+  .hero {
+    min-height: 64vh;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .credibility {
+    grid-template-columns: 1fr;
+  }
+
+  .about-image {
+    min-height: 280px;
+  }
+}
+
+@media (max-width: 480px) {
+  .site-header {
+    gap: 10px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+
+  .brand-mark {
+    font-size: 1.5rem;
+  }
+
+  .firm-name {
+    font-size: 0.92rem;
+  }
+
+  .lawyer-name {
+    font-size: 0.75rem;
+  }
+
+  .hero h1 {
+    font-size: 1.7rem;
+  }
+
+  .btn {
+    padding: 11px 16px;
+  }
+
+  section {
+    padding-top: 46px;
+    padding-bottom: 46px;
   }
 }
