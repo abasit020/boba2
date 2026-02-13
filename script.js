@@ -3,11 +3,11 @@ const contactSection = document.getElementById('contact');
 const contactForm = document.getElementById('contact-form');
 const formStatus = document.getElementById('form-status');
 
-const EMAILJS_PUBLIC_KEY = 'YOUR_EMAILJS_PUBLIC_KEY';
-const EMAILJS_SERVICE_ID = 'YOUR_EMAILJS_SERVICE_ID';
-const EMAILJS_TEMPLATE_ID = 'YOUR_EMAILJS_TEMPLATE_ID';
+const EMAILJS_PUBLIC_KEY = 'I3x2xybaTL0jcZifD';
+const EMAILJS_SERVICE_ID = 'service_qfwyh2p';
+const EMAILJS_TEMPLATE_ID = 'template_u84quor';
 
-if (window.emailjs && EMAILJS_PUBLIC_KEY !== 'YOUR_EMAILJS_PUBLIC_KEY') {
+if (window.emailjs) {
   window.emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
 }
 
@@ -26,15 +26,6 @@ contactForm.addEventListener('submit', async (event) => {
 
   if (!window.emailjs) {
     formStatus.textContent = 'Email service is unavailable right now. Please try again shortly.';
-    return;
-  }
-
-  if (
-    EMAILJS_PUBLIC_KEY === 'YOUR_EMAILJS_PUBLIC_KEY' ||
-    EMAILJS_SERVICE_ID === 'YOUR_EMAILJS_SERVICE_ID' ||
-    EMAILJS_TEMPLATE_ID === 'YOUR_EMAILJS_TEMPLATE_ID'
-  ) {
-    formStatus.textContent = 'Please configure EmailJS keys in script.js before sending messages.';
     return;
   }
 
